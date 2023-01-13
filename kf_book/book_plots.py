@@ -17,7 +17,6 @@ from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 
 from contextlib import contextmanager
-import ipywidgets
 import matplotlib as mpl
 import matplotlib.pylab as pylab
 import matplotlib.pyplot as plt
@@ -314,22 +313,6 @@ def plot_kf_output(xs, filter_xs, zs, title=None, aspect_equal=True):
         plt.gca().set_aspect('equal')
     plt.xlim((-1, len(xs)))
     plt.show()
-
-
-def FloatSlider(value, **kwargs):
-    """
-    Creates an ipwidgets FloatSlider with continuous update
-    turned off
-    """
-    return ipywidgets.FloatSlider(value, continuous_update=False, **kwargs)
-
-
-def IntSlider(value, **kwargs):
-    """
-    Creates an ipwidgets IntSlider with continuous update
-    turned off
-    """
-    return ipywidgets.IntSlider(value, continuous_update=False, **kwargs)
 
 
 def plot_measurements(xs, ys=None, dt=None, color='k', lw=1, label='Measurements',
